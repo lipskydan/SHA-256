@@ -60,3 +60,12 @@ a = temp1 + temp2<br>
 
 * Addition is calculated by mod 2 ^ 32
 * All calculations 64 times, changing variables a-h
+
+### Step 7 - Change the final values
+
+After the compression cycle, during the chunk cycle, we change the hash values by adding the corresponding a-h variables to them.<br>
+As before, all addition is done modulo 2 ^ 32
+
+### Step 8 - Final Hash
+
+Finally, we put everything together
