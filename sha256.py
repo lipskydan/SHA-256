@@ -154,5 +154,9 @@ def _rotate_right(num: int, shift: int, size: int = 32):
     return (num >> shift) | (num << size - shift)
 
 
+def sha256(message: str) -> str:
+    return generate_hash(message).hex()
+
+
 if __name__ == "__main__":
-    print(generate_hash("Hello").hex())
+    print(sha256("My cool awesome text for hashing"))
