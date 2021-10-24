@@ -3,11 +3,23 @@ from sha256 import sha256
 import string
 import random
 
+import time
 
-def generate_random_str(size=4, chars=string.ascii_uppercase + string.digits):
+
+def time_exec(func):
+    def wrapper():
+        start = time.time()
+        func()
+        end = time.time()
+        print(f'{func.__name__}: works {end - start}s')
+    return wrapper
+
+
+def generate_random_str(size=6, chars=string.ascii_uppercase + string.digits):
     return ''.join(random.choice(chars) for _ in range(size))
 
 
+@time_exec
 def find_collision():
     previous_keys = set()
     successful_hashes = 0
