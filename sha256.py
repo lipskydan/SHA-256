@@ -160,3 +160,5 @@ def sha256(message: str) -> str:
 
 if __name__ == "__main__":
     print(sha256("My cool awesome text for hashing"))
+    # print(sha256("000102030405060708090A0B0C0D0E0F101112131415161718191A1B1C1D1E1F"))
+
